@@ -1,15 +1,14 @@
 'use strict';
 
 const joi = require('joi');
+const handlers = require('../handlers');
 
 const routes = (server) => [
     {
         path: '/',
         method: 'GET',
         config: {
-            handler: (req, reply) => {
-                reply("hello from inside the routes")
-            }
+            handler: handlers.hello.sayHello
         }
     }
 ];
