@@ -12,10 +12,11 @@ const routes = (server) => [
         }
     },
     {
-        path: '/about',
+        path: '/about/{user}',
         method: 'GET',
         config: {
-            handler: handlers.about.about.aboutUs
+            handler: handlers.about.about.aboutUs,
+            tags: ['about']
         }
     }
 ];
